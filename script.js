@@ -24,33 +24,33 @@ function writePassword() {
 function generatePassword() {
 confirmChoices();
 var passwordStore = [];
-console.log(passwordStore);
+
   for (i = 0; i <= userLength; i++) {
-    console.log(userLength);
     
     if (lowerChoice) {
       var randomLowerLetter = Math.floor(Math.random() * arrLowerLetter.length);
-      console.log(randomLowerLetter);
       var lowerPick = arrLowerLetter[randomLowerLetter];
-      console.log(lowerPick);
       passwordStore.push(lowerPick);
+      i++
 
     }
    
     if (upperChoice) {
       var randomUpperLetter = Math.floor(Math.random() * arrUpperLetter.length);
-      console.log(randomUpperLetter);
       passwordStore.push(arrUpperLetter[randomUpperLetter]);
+      i++
     }
     
     if (numberChoice) {
       var randomNum = Math.floor(Math.random() * 10);
       passwordStore.push(randomNum);
+      i++
     }
     
     if (specialChoice) {
       var randomSpecialLetter = Math.floor(Math.random() * arrSpecialCharacter.length);
       passwordStore.push(arrSpecialCharacter[randomSpecialLetter]);
+      i++
     } 
    
   }
